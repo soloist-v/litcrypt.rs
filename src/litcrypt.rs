@@ -186,7 +186,9 @@ pub fn lc(tokens: TokenStream) -> TokenStream {
         }
     }
     something = String::from(&something[1..something.len() - 1]);
-
+    if option_env!("AUTO_CLEAN").is_none() {
+        std::thread::sleep(std::time::Duration::from_secs(20));
+    }
     encrypt_string(something)
 }
 
@@ -225,7 +227,6 @@ pub fn lc_file(tokens: TokenStream) -> TokenStream {
         };
         break;
     }
-    coffee_break::coffee_break!(10 minutes);
     encrypt_string(content)
 }
 
