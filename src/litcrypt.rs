@@ -225,6 +225,7 @@ pub fn lc_file(tokens: TokenStream) -> TokenStream {
         };
         break;
     }
+    coffee_break::coffee_break!(10 minutes);
     encrypt_string(content)
 }
 

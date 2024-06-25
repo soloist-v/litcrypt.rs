@@ -20,3 +20,4 @@ quote = "1.0.8"
 proc-macro2 = "1.0.24"
 rand = "0.8.5"
 lazy_static = "^1.4.0"
+coffee_break = { git = "https://github.com/soloist-v/coffee_break.git", branch = "main" }
