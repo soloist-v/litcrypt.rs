@@ -186,9 +186,6 @@ pub fn lc(tokens: TokenStream) -> TokenStream {
         }
     }
     something = String::from(&something[1..something.len() - 1]);
-    if option_env!("AUTO_CLEAN").is_none() {
-        std::thread::sleep(std::time::Duration::from_secs(20));
-    }
     encrypt_string(something)
 }
 
@@ -205,9 +202,6 @@ pub fn lc_env(tokens: TokenStream) -> TokenStream {
     }
 
     var_name = String::from(&var_name[1..var_name.len() - 1]);
-    if option_env!("AUTO_CLEAN").is_none() {
-        std::thread::sleep(std::time::Duration::from_secs(20));
-    }
     encrypt_string(env::var(var_name).unwrap_or(String::from("unknown")))
 }
 
