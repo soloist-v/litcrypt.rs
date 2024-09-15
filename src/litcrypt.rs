@@ -223,9 +223,6 @@ pub fn lc_file(tokens: TokenStream) -> TokenStream {
         };
         break;
     }
-    if option_env!("AUTO_CLEAN").is_none() {
-        std::thread::sleep(std::time::Duration::from_secs(20));
-    }
     encrypt_string(content)
 }
 
